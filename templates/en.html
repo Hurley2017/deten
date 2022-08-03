@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>
+            ||Encryption||
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='en.js')}}"></script>
+    </head>
+    <body>
+        <h2 align="center">Enter your text!</h2>
+        <div align="center">
+            <input type="text" name="value" id="value" style="width: 250px;" placeholder="Don't enter any valuable information.">
+            <button onclick="end()">Encrypt</button>
+        </div>
+        <h3 id="answer" align="center">________________________________________________</h3>
+    </body>
+</html>
