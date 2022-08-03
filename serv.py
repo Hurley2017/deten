@@ -5,7 +5,7 @@ import string
 import random
 import pymongo
 
-connection_url = "mongodb+srv://deen:tusher9073@cluster0.j5jyv.mongodb.net/test"
+connection_url = "NULL"
 
 ui = Flask(__name__)
 def call1(value):
