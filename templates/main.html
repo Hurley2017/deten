@@ -1,20 +1,45 @@
 <html>
-    <head>
-        <title>
-            Welcome People!
-        </title>
-        <script src="{{url_for('static', filename='main.js')}}"></script>
-    </head>
-    <body>
-        <h2 align="center">Hello random user!</h2>
-        <h3 align="center">We encrypt texts from you.</h3>
-        <hr>
-        <br>
-        <br>
-        <h3 align="center">Choose from the following:</h3>
-        <div align="center">
-        <button onclick="en()">Encryption</button>
-        <button onclick="de()">Decryption</button>
+
+<head>
+    <title>Welcome People!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT Mono" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+</head>
+
+<body class="lg:px-24 md:px-8 px-2">
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col flex-row items-center">
+            <a class="flex order-first title-font font-medium items-center text-gray-900 lg:items-center mb-4 md:mb-0">
+                <span class="ml-3 text-xl" style="
+              font-family: Inconsolata;
+              color: #0477fa;
+              font-weight: bolder;
+              font-size: 32px;
+            ">Hello random user!</span>
+            </a>
+
+            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                We encrypt texts from you
+            </p>
         </div>
-    </body>
+    </header>
+    <div class="py-2"></div>
+    <h3 align="center" class="text-white">Choose from the following:</h3>
+    <div class="py-2 text-center">
+        <button type="button" onclick="en()"
+            class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 w-32">
+            Encryption
+        </button>
+        <button type="button" onclick="de()"
+            class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 w-32">
+            Decryption
+        </button>
+    </div>
+</body>
+
 </html>

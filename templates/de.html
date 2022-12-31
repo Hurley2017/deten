@@ -1,18 +1,110 @@
 <html>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-    <head>
-        <title>
-            ||Decryption||
-        </title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="{{url_for('static', filename='de.js')}}"></script>
-    </head>
-    <body>
-        <h2 align="center">Enter your key!</h2>
-        <div align="center">
-            <input type="text" name="value" id="value" style="width: 250px;" placeholder="Don't enter unga bunga key.">
-            <button onclick="ded()">Decrypt</button>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<head>
+    <title>
+        ||Decryption||
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT Mono" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col flex-row items-center">
+            <a class="flex order-first title-font font-medium items-center text-gray-900 lg:items-center mb-4 md:mb-0">
+                <span class="ml-3 text-xl" style="
+              font-family: Inconsolata;
+              color: #0477fa;
+              font-weight: bolder;
+              font-size: 32px;
+            ">Decryption</span>
+            </a>
         </div>
-        <h3 id="answer" align="center">________________________________________________</h3>
-    </body>
+    </header>
+    <div class="text-center">
+        <label for="message" class="block mb-2 text-sm font-medium text-white">Enter your key!</label>
+        <center>
+            <div class="w-full md:w-96 text-center">
+                <textarea id="value" rows="4"
+                    class="block p-2.5 w-full text-sm rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Don't enter unga bunga key."></textarea>
+            </div>
+        </center>
+        <div class="py-2"></div>
+        <button type="button" onclick="ded()"
+            class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 w-32">
+            Decrypt
+        </button>
+        <div class="py-2"></div>
+        <center>
+            <div class="w-full md:w-96 text-center">
+                <div class="relative border-y border-x code-syntax border-gray-600 rounded-md " id="boxxx"
+                    style="display: none;">
+                    <div class="grid w-full grid-cols-1 border-b rounded-t-md bg-gray-700 border-gray-600">
+                        <!-- <ul class="flex text-sm font-medium text-center text-gray-400"></ul> -->
+                        <div class="flex justify-between  ">
+                            <div class="flex-1 text-white py-2 ">
+                                <div class="relative overflow-hidden max-h-72">
+
+
+                                </div>
+                            </div>
+                            <button id="copy-button"
+                                class="flex items-center rounded-md px-3 py-2 text-xs font-medium border-l border-gray-600 text-gray-400 bg-gray-800 hover:text-white ">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                <span class="copy-text" id="msg">Copy</span>
+                            </button>
+
+                            <div id="default-heading-example-copy-clipboard-tooltip" role="tooltip"
+                                class="absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip dark:bg-gray-700 opacity-0 invisible"
+                                style="
+                position: absolute;
+                inset: 0px auto auto 0px;
+                margin: 0px;
+                transform: translate(687px, 44px);
+              " data-popper-placement="bottom">
+                                Copy to clipboard
+                                <div class="tooltip-arrow" data-popper-arrow="" style="
+                  position: absolute;
+                  left: 0px;
+                  transform: translate(99px, 0px);
+                "></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div data-code-wrapper="" class="p-4 overflow-y-auto text-white " tabindex="-1">
+                            <code class="codebox" id="answer">
+                        Welcome to Hell
+                    </code>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </center>
+
+    </div>
+    <!-- <h2 align="center">Enter your key!</h2>
+    <div align="center">
+        <input type="text" name="value" id="value" style="width: 250px;" placeholder="Don't enter unga bunga key.">
+        <button onclick="ded()">Decrypt</button>
+    </div>
+    <h3 id="answer" align="center">________________________________________________</h3> -->
+</body>
+<script src="{{url_for('static', filename='de.js')}}"></script>
+
 </html>
