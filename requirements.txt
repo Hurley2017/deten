@@ -1,0 +1,7 @@
+gunicorn==20.0.4
+Flask
+Werkzeug
+pymongo
+pymongo[srv]
+Flask-CORS
+pytz
