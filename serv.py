@@ -3,9 +3,13 @@ import base64
 import secrets
 import string
 import random
+from dotenv import load_dotenv
+import os
 import pymongo
 
-connection_url = "mongodb+srv://deen:tusher9073@cluster0.j5jyv.mongodb.net/test"
+load_dotenv()
+
+connection_url = os.environ.get("CONN")
 
 ui = Flask(__name__)
 def call1(value):
