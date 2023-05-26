@@ -6,3 +6,4 @@ pymongo
 pymongo[srv]
 Flask-CORS
 pytz
+bardapi
