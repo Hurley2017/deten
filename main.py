@@ -1,4 +1,4 @@
 from serv import ui
-api = ui
+app = ui
 if "__main__" == __name__:
-    api.run()
+    app.run()
